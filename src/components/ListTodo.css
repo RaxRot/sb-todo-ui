@@ -1,0 +1,77 @@
+:root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #6366f1;
+    --accent-bg: rgba(99, 102, 241, 0.1);
+    --success: #10b981;
+    --danger: #ef4444;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--surface);
+    border-radius: 18px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    border: 1px solid #334155;
+}
+
+h1 {
+    color: var(--text-primary);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.todo-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.todo-table th {
+    text-align: center;
+    padding: 16px;
+    font-size: 16px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    background-color: var(--surface);
+}
+
+.todo-table td {
+    background-color: #0f172a;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    text-align: center;
+    transition: background 0.2s ease-in-out, transform 0.15s;
+}
+
+.todo-table tr:hover td {
+    background-color: var(--accent-bg);
+    transform: scale(1.005);
+}
+
+.todo-table td:last-child {
+    font-weight: bold;
+}
+.completed {
+    text-decoration: line-through;
+    color: #6b7280;
+    opacity: 0.7;
+}
